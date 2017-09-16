@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  div(class="container")
+    h1= title
+    h2 Instances
+    div(class="row")
+      div(class="col")
+        | Server Type
+      div(class="col")
+        | Size
+      div(class="col")
+        | Price
+      div(class="col")
+        | Instance Type
+      div(class="col")
+        | vCPU
+
+    each instance in instances
+      div(class="row")
+        div(class="col")
+          = instance.serverType
+        div(class="col")
+          = instance.size
+        div(class="col")
+          = instance.price
+        div(class="col")
+          = instance.instanceType
+        div(class="col")
+          = instance.vCPU
+

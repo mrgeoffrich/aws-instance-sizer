@@ -1,0 +1,48 @@
+{
+  "name": "tatts-aws-login",
+  "version": "1.0.0",
+  "description": "Logs you in to the Tatts AWS account using your domain credentials.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha *.spec.js",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha *.spec.js"
+  },
+  "bin": {
+    "tatts-aws-login": "./index.js"
+  },
+  "author": "Geoff Rich",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.100.0",
+    "body-parser": "^1.18.1",
+    "chalk": "^2.1.0",
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.1",
+    "cookie-parser": "^1.4.3",
+    "escodegen": "^1.9.0",
+    "esprima": "^4.0.0",
+    "esprima-to-value": "^1.0.5",
+    "express": "^4.15.4",
+    "express-winston": "^2.4.0",
+    "figlet": "^1.2.0",
+    "inquirer": "^3.2.2",
+    "pug": "^2.0.0-rc.4",
+    "request": "^2.81.0",
+    "sequelize": "^4.8.4",
+    "serve-favicon": "^2.4.4",
+    "sqlite3": "^3.1.11",
+    "winston": "^2.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.tattsgroup.com/TattsGroup/aws-instance-sizer"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.1",
+    "sinon-chai": "^2.13.0"
+  }
+}
