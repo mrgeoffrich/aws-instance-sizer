@@ -1,31 +1,30 @@
 extends layout
 
 block content
-  div(class="container")
-    h1= title
-    h2 Instances
-    div(class="row")
-      div(class="col")
-        | Server Type
-      div(class="col")
-        | Size
-      div(class="col")
-        | Price
-      div(class="col")
-        | Instance Type
-      div(class="col")
-        | vCPU
-
-    each instance in instances
-      div(class="row")
-        div(class="col")
-          = instance.serverType
-        div(class="col")
-          = instance.size
-        div(class="col")
-          = instance.price
-        div(class="col")
-          = instance.instanceType
-        div(class="col")
-          = instance.vCPU
-
+  table(id="displayTable",class="table table-striped table-bordered")
+    thead
+      tr
+        th Size
+        th Price per Day
+        th vCPU
+        th ECU
+        th Memory
+        th Storage
+    tbody
+      each instance in instances
+        tr
+          td 
+            = instance.size
+          td 
+            =  Math.round((instance.price * 24) * 100) / 100 
+          td 
+            = instance.vCPU
+          td
+            if instance.ECUIsVariable
+              | variable
+            else
+              = instance.ECU
+          td 
+            = instance.memory
+          td 
+            = instance.storage
