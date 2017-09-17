@@ -11,31 +11,26 @@ html(lang='en')
   body
     div(class="ui fixed inverted menu")
       div(class="ui container")
-        a(href="#",class="header item")
-          | Project Name
-        a(href="#",class="item")
-          | Home
+        a(href="/",class="header item")
+          | AWS Instances
+        a(href="/instances/ap-southeast-2/linux",class="item")
+          | Linux
+        a(href="/instances/ap-southeast-2/windows",class="item")
+          | Windows
+        a(href="/instances/ap-southeast-2/RHEL",class="item")
+          | RHEL
         div(class="ui simple dropdown item")
-          | Dropdown 
+          | Others 
           i(class="dropdown icon")
           div(class="menu")
-            a(class="item" href="#")
-              | Link Item
-            a(class="item" href="#")
-              | Link Item
-            div(class="divider")
-            div(class="header")
-              | Header Item
-            div(class="item")
-              i(class="dropdown icon")
-              | Sub Menu
-              div(class="menu")
-                a(class="item" href="#")
-                  | Link Item
-                a(class="item" href="#")
-                  | Link Item
-            a(class="item" href="#")
-              | Link Item
+            a(class="item" href="/instances/ap-southeast-2/windowsSQL")
+              | Windows SQL
+            a(class="item" href="/instances/ap-southeast-2/windowsSQLWeb")
+              | Windows Web Sql
+            a(class="item" href="/instances/ap-southeast-2/windowsSQLEnterprise")
+              | Windows Ent. Sql
+            a(class="item" href="/instances/ap-southeast-2/SLES")
+              | SLES
 
     div(class="ui main text container")
       block content

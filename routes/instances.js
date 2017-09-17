@@ -7,7 +7,7 @@ router.get('/:region/:ostype', function(req, res) {
     region: req.params.region,
     serverType: req.params.ostype
   }}).then(function(instances) {
-    res.render('index', {
+    res.render('instances', {
       title: `${req.params.ostype} instances in ${req.params.region}`,
       instances: instances
     });
