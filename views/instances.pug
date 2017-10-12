@@ -1,6 +1,15 @@
 extends layout
 
 block content
+  form(class="ui form")
+    div(class="field")
+      label Min spec
+      div(class="two fields")
+        div(class="field")
+          input(type="text",id="mincpu",placeholder="CPUs")
+        div(class="field")
+          input(type="text",id="minram",placeholder="RAM")
+
   table(id="displayTable",class="table table-striped table-bordered")
     thead
       tr

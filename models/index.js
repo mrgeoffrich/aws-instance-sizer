@@ -1,7 +1,10 @@
 var fs = require('fs');
 var path = require('path');
 var Sequelize = require('sequelize');
-const sequelize = new Sequelize('sqlite://db.sqlite');
+
+let connectionString = process.env.CONNECTION_STRING || 'sqlite://db.sqlite';
+
+const sequelize = new Sequelize(connectionString);
 
 var db = {};
 
