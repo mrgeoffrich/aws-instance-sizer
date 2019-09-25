@@ -5,7 +5,7 @@ var router  = express.Router();
 router.get('/:region/:ostype', function(req, res) {
   models.Instance.findAll({ where: {
     region: req.params.region,
-    serverType: req.params.ostype
+    operatingSystem: req.params.ostype
   }}).then(function(instances) {
     res.render('instances', {
       title: `${req.params.ostype} instances in ${req.params.region}`,

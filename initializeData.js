@@ -43,8 +43,8 @@ function requestAndParsePromise(url) {
 };
 
 const initData = async (models) => {
-    await models.Instance.sync({ force: true })
-    const instanceCountValue = models.Instance.count();
+    await models.Instance.sync({ force: false })
+    const instanceCountValue = await models.Instance.count();
     if (instanceCountValue > 0) {
         return;
     }

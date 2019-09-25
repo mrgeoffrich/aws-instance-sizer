@@ -5,7 +5,7 @@ block content
     thead
       tr
         th Size
-        th Price per Day
+        th Price per Day (USD)
         th vCPU
         th ECU
         th Memory
@@ -14,16 +14,13 @@ block content
       each instance in instances
         tr
           td 
-            = instance.size
+            = instance.instanceType
           td 
-            =  Math.round((instance.price * 24) * 100) / 100 
+            = (instance.price * 24) / 100000
           td 
-            = instance.vCPU
+            = instance.vcpu
           td
-            if instance.ECUIsVariable
-              | variable
-            else
-              = instance.ECU
+            = instance.ecu
           td 
             = instance.memory
           td 
