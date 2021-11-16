@@ -11,7 +11,7 @@
   "author": "Geoff Rich",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.535.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "escodegen": "^1.12.0",
